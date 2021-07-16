@@ -7,7 +7,7 @@ First, install [Yeoman](http://yeoman.io) and generator-minpm using [npm](https:
 
 ```bash
 npm install -g yo
-npm install -g generator-npm
+npm install -g generator-minpm
 ```
 
 Then generate your new project:
