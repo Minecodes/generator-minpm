@@ -8,11 +8,7 @@ const { name } = require("../../package.json");
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(
-        `Welcome to the glorious ${chalk.red(name)} generator!`
-      )
-    );
+    this.log(yosay(`Welcome to the glorious ${chalk.red(name)} generator!`));
 
     const prompts = [
       {
@@ -56,14 +52,8 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.writeJSON(
-      //this.templatePath("package.json"),
-      this.destinationPath("package.json"),
-      config
-    );
+    this.fs.writeJSON(this.destinationPath("package.json"), config);
   }
 
-  install() {
-    //this.installDependencies();
-  }
+  install() {}
 };
